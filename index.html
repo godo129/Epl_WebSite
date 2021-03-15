@@ -3,16 +3,81 @@
 <head>
 <title> EPL Site </title>
 <meta charset="utf-8">
+<style>
+body {
+  background-image:url('./background/1.jpg') ;
+  background-size:100% 100%;
+}
+@media(min-width:1145px){
+  #top_image{
+    text-align: center;
+
+  }
+
+  #top{
+
+    display:grid;
+    grid-template-columns: 2.5fr 3.3fr 2.5fr;
+  }
+
+}
+
+@media(max-width:1145px){
+  #top_image{
+    text-align: center;
+
+  }
+  #music {
+    display:none;
+  }
+}
+
+#top_name {
+text-align: center;
+}
+h1{
+  text-align: center;
+}
+h3{
+  text-align: center;
+  border:1px solid black;
+
+}
+td{
+  border:1px solid black;
+}
+#ranking{
+  width: 200px;height: 30px;
+
+}
+
+</style>
+
+<script src="background.js"></script>
+
+
+
 </head>
-<body>
-<a href="index.html" >  <img src = "icon.png" style="margin-right:900px;">
-<iframe src="https://open.spotify.com/embed?uri=spotify%3Aplaylist%3A4x7T8AjUHcikyQowTJoxOj" width="400" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+<body id="back1">
+<div id="top">
+<div id="ranking">
+<input type="button" value="Skins" onclick="ch_bg()">
+</div>
 
-<h1><a href="index.html" style="margin:auto;"> Premier League</a></h1>
+<div id="top_image">
+<a href="index.html" >  <img src = "icon.png" ></div>
+<div id="music">
+<iframe align="right" src="https://open.spotify.com/embed?uri=spotify%3Aplaylist%3A4x7T8AjUHcikyQowTJoxOj" width="400" height="200" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+</div>
+</div>
 
-<h3 style = "margin-left:47px;"> Clubs </h3>
-<table style=" width:50%; height: 500px; text-align: center;">
-<tr valign="middle">
+<div id="top_name">
+<h1><a href="index.html"> Premier League</a></h1>
+</div>
+
+<h3 > Clubs </h3>
+<table style=" width:100%; height: 500px; text-align: center;">
+<tr>
 <td>
 
 <a href="Mcity.html">Man City</a>
@@ -106,3 +171,13 @@
 </ul>
 </body>
 </html>
+
+<script type="text/python">
+    from browser import document
+
+    def alert(event):
+        print("오잉??")
+
+    document["test-button"].bind("click", alert)
+
+</script>

@@ -1,0 +1,61 @@
+body {
+  background-image:url('./background/2.jpg') ;
+  background-size:100% 100%;
+}
+@media(min-width:1145px){
+
+  #top_image{
+    text-align: center;
+
+  }
+
+  #top{
+
+    display:grid;
+    grid-template-columns: 2.5fr 3.3fr 2.5fr;
+  }
+
+}
+
+@media(max-width:1145px){
+  #top_image{
+    text-align: center;
+
+  }
+  #music {
+    display:none;
+  }
+}
+
+#top_name {
+text-align: center;
+}
+h1{
+  text-align: center;
+}
+h3{
+  text-align: center;
+  margin-bottom: 0px;
+
+}
+h2{
+  margin-top:0px;
+}
+#club_image{
+  text-align: right;
+  margin-top: 0px;
+}
+#club_name{
+  margin-right: 35px;
+}
+
+
+#sub{
+
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+}
+#videos{
+    text-align:center;
+
+}
