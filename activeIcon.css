@@ -1,0 +1,78 @@
+input[id="menuicon"] {
+  display: none;
+}
+
+input[id="menuicon"] + label {
+    display: block;
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    cursor: pointer;   //커서 올려놓으면 변함
+}
+
+input[id="menuicon"]:checked + label {
+    z-index: 2;
+    left: 300px;
+}
+
+
+input[id="menuicon"] + label span {
+    display: block;
+    position: absolute;
+    width: 100% ;
+    height: 5px ;
+    border-radius: 30px;   /* 사각형 모서리 둥글게*/
+    background: #fbc531 ;
+    transition:all.35s;  // 애니메이션 효과
+
+}
+
+input[id="menuicon"] + label span:nth-child(1) {
+    top: 0;
+
+}
+
+input[id="menuicon"] + label span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);  // 컨텐츠 값 만큼 빼줘야 정확한 가운데
+
+}
+
+input[id="menuicon"] + label span:nth-child(3) {
+    bottom: 0;
+
+}
+
+/* 클릭 됬을때 */
+input[id="menuicon"]:checked + label span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+
+}
+
+input[id="menuicon"]:checked + label span:nth-child(2) {
+    opacity: 0;
+
+}
+
+input[id="menuicon"]:checked + label span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+
+}
+
+div[class="sidebar"] {
+
+  width:300px;
+  height:100%;
+  background: #9b59b6;
+  position: fixed;    /*  스크롤 움직일 때 움직이지 않고 고정   */
+  top: 0;
+  left: -300px;   /*  사이드 바 크기 */
+  z-index:1;   /* 우선순위 값 */
+  transition:all .35s;
+}
+
+input[id="menuicon"]:checked + label + div {
+  left:0 ;  /* 위치가 변하면서 사이드바가 보임 */
+}

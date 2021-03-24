@@ -3,10 +3,15 @@
 <head>
 <title> EPL Site </title>
 <meta charset="utf-8">
+<link rel="stylesheet" href="activeIcon.css"/>
 <style>
 body {
   background-image:url('./background/1.jpg') ;
   background-size:100% 100%;
+  color: #fbc531;
+  animation: fadeIn 0.5s linear;
+
+
 }
 @media(min-width:1145px){
   #top_image{
@@ -21,6 +26,7 @@ body {
   }
 
 }
+
 
 @media(max-width:1145px){
   #top_image{
@@ -40,29 +46,77 @@ h1{
 }
 h3{
   text-align: center;
-  border:1px solid black;
+  border:3px solid black;
 
 }
+h5{
+  text-align: center;
+}
 td{
-  border:1px solid black;
+  border:3px solid black;
 }
 #ranking{
   width: 200px;height: 30px;
 
 }
 
+
+.form,
+.greeting{
+  display: none;
+}
+
+.showing{
+  display: block;
+}
+
+
 </style>
-
 <script src="background.js"></script>
-
-
-
 </head>
 <body id="back1">
+
+<div class="js-clock">
+
+</div>
+
 <div id="top">
 <div id="ranking">
+
+<h4>current time</h4>
 <input type="button" value="Skins" onclick="ch_bg()">
+
+
+
+<form class='js-form'>
+<input type="text" placeholder="What is your favorate team?" />
+</form>
+<h4 class="js-greetings"></h4>
+
+
+<ul class="js-toDoList"></ul>
+<script scr="todo.js"></script>
+
+
+
+
+<script src="gretting.js"></script>
+<script src="clock.js"></script>
+<p>
+<span class="js-weather"><span>
+<script src="weather.js"></script>
+</p>
+<input type="checkbox" id="menuicon">
+<label for="menuicon">
+    <span></span>
+    <span></span>
+    <span></span>
+</label>
+<div class="sidebar">
 </div>
+
+</div>
+
 
 <div id="top_image">
 <a href="index.html" >  <img src = "icon.png" ></div>
